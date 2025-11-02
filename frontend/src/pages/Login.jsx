@@ -22,7 +22,7 @@ export default function Login({ onLogin }) {
     }
 
     try {
-      const res = await axios.post("https://telimedicine-backend.onrender.com", {
+      const res = await axios.post("https://fullstack-telimedicine-backend.onrender.com", {
         email: form.email,
         password: form.password,
       });
