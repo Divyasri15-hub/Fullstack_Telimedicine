@@ -47,7 +47,7 @@ export default function Register() {
 
     try {
       // ✅ Backend API call
-      const res = await axios.post("https://telimedicine-backend.onrender.com", {
+      const res = await axios.post("https://fullstack-telimedicine-backend.onrender.com", {
         name: form.name,
         email: form.email,
         password: form.password,
