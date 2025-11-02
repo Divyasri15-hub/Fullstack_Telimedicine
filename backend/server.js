@@ -1,10 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-app.use(cors({
-  origin: 'https://fullstack-telimedicine-frontend.onrender.com',
-  credentials: true
-}));
 
 const connectDB = require('./config/db');
 
@@ -15,7 +11,10 @@ const userRoutes = require('./routes/users');
 
 const app = express();
 connectDB();
-
+app.use(cors({
+  origin: 'https://fullstack-telimedicine-frontend.onrender.com',
+  credentials: true
+}));
 app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
